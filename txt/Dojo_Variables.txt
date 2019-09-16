@@ -1,0 +1,55 @@
+CS_Dojo_Variables:
+------------------
+
+1. a = 5
+In languages like C, C++: if we assign a varible a value; its like a has a box containing value 5.
+But in python; a refers to 5; it doesnt contain 5.
+
+--
+a = 5
+f = a
+print(f)
+o/p: 
+5
+
+here, a refers to 5.
+But f refers to value that a refers to, not a itself.
+
+--
+a = 4
+f = a
+a = 2
+print(a)
+print(f)
+o/p: 
+2
+4
+
+when, a = 4, it refers to 4. When f = a, it refers to value that a refers to not a itself.
+Therefore, when value of a was changed to 2, f was still referring to 4 and not 2.
+
+__________________________________________________________________________________________________________________________________________________________
+
+--
+# Swap 2 numbers: (using 2 temp variable)
+v1 = 2
+v2 = 5
+x = v2
+y = v1
+v1 = x
+v2 = y
+
+print('V1:', v1)
+print('V2:', v2)
+
+--
+# Swap 2 numbers: (alternate- using only 1 temp variable)
+v1 = 2
+v2 = 8
+temp = v1
+v1 = v2
+v2 = temp
+print('V1:', v1)
+print('V2:', v2)
+
+__________________________________________________________________________________________________________________________________________________________

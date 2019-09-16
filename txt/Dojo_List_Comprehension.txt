@@ -1,0 +1,72 @@
+CS Dojo List Comprehension and sets:
+-------------------------------------
+
+
+--
+print(type('asew'))
+print(type(1212))
+print(type(True))
+
+---------------------------------------------------------
+-- append:
+
+b = []
+b.append(10)
+b.append(85)
+b.append(7)
+print(b)
+
+---------------------------------------------------------
+#WAP to print twice values in a new list from a given list.
+a = [1,2,9,5]
+c = []
+for x in a:
+    c.append(x*2)
+print(c)
+
+---------------------------------------------------------
+alter method:
+a = [1,2,9,5]
+d = [x*2 for x in a]
+print(d)
+
+________________________________________________________________________________________________________________________________________________________________
+
+--SET--
+--------
+
+--A set is a type which stores a set of things.
+a set of unique things.
+
+--
+#to add from list to set
+a = [1, 4, 8, 12]
+f = set()
+for i in a:
+    f.add(i)
+print(f)
+
+---------------------------------------------------------
+
+--
+#to add from set to list
+new_set = {1,2,3}
+new_list = [] #can also be written as: new_list = list()
+for i in new_set:
+    new_list.append(i)
+print(new_list)
+
+---------------------------------------------------------
+
+--
+g = set() #declare empty set
+g.add('Apple')
+g.add('Banana')
+g.add('Carrot')
+g.add(1)
+print(g)
+
+o/p:
+{'Apple', 1, 'Banana', 'Carrot'}
+
+here, the set is not in the seqence of add. '1' is 2nd in output.

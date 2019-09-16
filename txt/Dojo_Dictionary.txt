@@ -1,0 +1,86 @@
+CS Dojo Dictionaries:
+---------------------
+
+
+-- dictionaries are like look up table.
+-- the table contents are stored as keys and values.
+-- eg:
+d = {} #empty dictionary
+
+alter:
+d = dict{}
+
+--
+d = {"george": 32, "tom": 28}
+here, key george is related to value 32 and key tom is related to value 28.
+
+alter: 
+d["george"] = 32
+
+---------------------------------------------------------
+
+d["george"] = 2
+print(d["george"])
+
+---------------------------------------------------------
+
+-- we can change value of a key also.
+eg:
+
+d["Jenny"] = 48
+print(d["Jenny"])
+d["Jenny"] = 12 #Value changed here.
+print(d["Jenny"])
+---------------------------------------------------------
+
+-- keys can be of certain type. but values can be of any data type.
+most of the time; keys are of Strings or numbers.
+
+---------------------------------------------------------
+
+# to iterate over key value pairs.
+for key,value in d.items(): #already defined items in d earlier.
+    print("key:")
+    print(key)
+    print("value:")
+    print(value)
+    print("") # go give a space in outputs.
+    
+o/p:
+key:
+george
+value:
+32
+
+key:
+tom
+value:
+28
+
+key:
+Jenny
+value:
+12
+
+---------------------------------------------------------
+
+--
+# to iterate over key value pairs.
+for key,value in d.items():  #already defined items in d earlier.
+    print("key:",key)
+    print("value:",value)
+    print("---------------")
+    
+o/p:
+key: george
+value: 32
+---------------
+key: tom
+value: 28
+---------------
+key: Jenny
+value: 12
+---------------
+---------------------------------------------------------
+
+--

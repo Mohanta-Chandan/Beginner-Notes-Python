@@ -1,0 +1,154 @@
+CS Dojo Class and Objects:
+--------------------------
+
+
+-- object is collection of properties which can be expressed as variables and functions.
+---------------------------------------------------------
+
+-- eg:
+here we have 2 different varibales having objects:
+
+in r1:
+name : "Tom"  #varibales within the object are known as instant variables or attributes.
+colour : "Red"
+weight : 30
+introduceSelf()  #and functions within object are known as methods.
+
+in r2:
+name : "Jerry"
+colour : "Blue"
+weight : 40
+introduceSelf()
+
+here, varibales within the object are known as instant variables or attributes.
+and functions within object are known as methods.
+
+__________________________________________________________________________________________________________________________________________________________
+
+CLASS:
+------
+
+--The instantiation operation (“calling” a class object) creates an empty object. Many classes like to create objects with instances customized to a specific initial state. Therefore a class may define a special method named __init__(), like this:
+
+def __init__(self):
+    self.data = []
+---------------------------------------------------------
+
+class is like a blueprint from which we can make object.
+class generally dont refer to any particular object. it refers to type or category.
+
+--eg:
+
+
+class Robot:
+    def introduce_self(self):  #self is argument
+        print('My name is: '+ self.name) #here, self will take name from objects below.
+        
+r1 = Robot() #using default constructor for class Robot
+r1.name = 'Tom'
+r1.colour = 'Red'
+r1.weight = 30
+
+r2 = Robot()
+r2.name = 'Jerry'
+r2.colour = 'Blue'
+r2.weight = 40
+
+r1.introduce_self()
+r2.introduce_self()
+
+---------------------------------------------------------
+
+--eg:
+
+class Robot:
+    def __init__(self, name, colour, weight):
+        self.name = name
+        self.colour = colour
+        self.weight = weight
+
+    def introduce_self(self):
+        print("My name is " + self.name)
+        print('My Colour is ' + self.colour)
+        print('My weight is ' + self.weight)
+        print('_________________')
+        
+r1 = Robot("Tom", "red", "30")
+r2 = Robot("Jerry", "blue", "40")
+    
+r1.introduce_self()
+r2.introduce_self()
+
+--o/p:
+
+My name is Tom
+My Colour is red
+My weight is 30
+_________________
+My name is Jerry
+My Colour is blue
+My weight is 40
+_________________
+
+---------------------------------------------------------
+
+-- interaction of 2 different classes:
+
+class Robot:
+    def __init__(self, n, c, w):
+        self.name = n
+        self.colour = c
+        self.weight = w
+        
+    def introduce_self(self):
+        print("My name is " + self.name)
+        print('My Colour is ' + self.colour)
+        print('My weight is ' + self.weight)
+        print('_________________')
+
+r1 = Robot('Tom','Red','30')
+r2 = Robot("Jerry", "blue", "40")
+
+r1.introduce_self()
+r2.introduce_self()
+
+class Person:
+    def __init__(self, n, p, i):
+        self.name = n
+        self.personality = p
+        self.isemployed = i
+        
+    def go_school(self):
+        self.isemployed = False
+    def go_office(self):
+        self.isemployed = True
+
+p1 = Person('Ram', 'All rounder', True)
+p2 = Person('Narayan', 'Open', False)
+
+#here, person p1 own robot r2 and person p2 own robot r1
+p1.robot_owned = r2 #created a new attribute in class person- robot_owned
+p2.robot_owned = r1
+
+p1.robot_owned.introduce_self() #calls and print from function introduce_self
+p2.robot_owned.introduce_self()
+
+
+--o/p:
+My name is Tom
+My Colour is Red
+My weight is 30
+_________________
+My name is Jerry
+My Colour is blue
+My weight is 40
+_________________
+My name is Jerry
+My Colour is blue
+My weight is 40
+_________________
+My name is Tom
+My Colour is Red
+My weight is 30
+_________________
+​

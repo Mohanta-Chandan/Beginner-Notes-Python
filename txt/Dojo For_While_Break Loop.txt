@@ -1,0 +1,116 @@
+CS_Dojo_For_Loop_While_Loop:
+----------------------------
+
+--FOR LOOP:
+-----------
+
+--
+a = [1,2,3,4,5,'ab','de',[1,2],['ve','eu']]
+for e in a: #it says print all values of list a
+    print(e)
+    
+-------------------------------------------------------
+--
+a = [1,2,4,6,7]
+sum = 0
+for e in a:
+    sum = sum + e #initially sum=0; then one one element of a was added till loop ends. so it gives sum
+print(sum)
+
+-------------------------------------------------------
+--
+# sum of numbers from 1 to 100.
+a = list(range(1,101)) #range excludes last number.
+sum = 0
+for e in a:
+    sum = sum + e
+print(sum)
+-------------------------------------------------------
+--
+# check if input number is divisible by 3:
+a = int(input('Enter number: '))
+if a%3 == 0:
+    print('Division is:',a/3)
+    print('Divisible by 3')
+else:
+    print('Remainder is:',a//3)
+    print('Not divisible by 3')
+-------------------------------------------------------
+
+--
+#sum of all multiples of 3,5 which are less than 100
+
+a = list(range(1,101))
+sum3 = 0
+sum5 = 0
+for i in a:
+    if i%3 == 0:
+        sum3 = sum3+i
+print('sum of multiple of 3 is:',sum3) #go out of loop
+for j in a:
+    if j%5 == 0:
+        sum5 = sum5+j
+print('sum of multiple of 5 is:',sum5) #go out of loop
+print('sum of multiple of 3 and 5:',sum3+sum5)        
+-------------------------------------------------------
+
+__________________________________________________________________________________________________________________________________________________________
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+--WHILE LOOP:
+-------------
+
+-- one useful use of while loop is that we can use it when we dont know how many loops we need to use.
+
+--
+#print sum of 1st 100 numbers:
+
+total = 0
+j = 1 #j is initialised
+while j < 101: #in while loop j need to be initialised before. in for loop variable can be initialised directily.
+    total = total+j
+    j = j + 1
+print(total)
+-------------------------------------------------------
+
+--
+below is situation where we have a list.
+in list we dont know what are the contents; but we do know that the values are in descending order.
+We need to find the sum of +ve integers only.
+
+here using for loops will be diffecult.
+
+given_list = [5,4,4,2,2,1,-1,-2,-3,-3,-9]
+total = 0
+i = 0
+while given_list[i] > 0:
+    total = total + given_list[i]
+    i = i + 1
+print(total)
+
+-------------------------------------------------------
+
+# find sum of +ve integers from a list: using for loop and break statement
+list2 = [5,5,4,2,3,3,1,-2,-1,-4,-4,-7]
+total2 = 0
+for i in list2:
+    if i > 0:
+        break #break statement: break when found -ve integer
+    total2 = total2 + i
+print(total2)
+
+-------------------------------------------------------
+
+# find sum of +ve integers from a list: using while loop and break statement
+list3 = [5,5,4,2,3,3,1,-2,-1,-4,-4,-7]
+total3 = 0
+i = 0
+while True: #we write a true fact statement after while
+    total3 = total3 + list3[i]
+    i = i+1
+    if list3[i] <= 0:
+        break
+print(total3)
+-------------------------------------------------------
+

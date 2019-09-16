@@ -1,0 +1,63 @@
+CS_Dojo_if_else:
+----------------
+
+----------------------------------------------------
+# if clause:
+a = int(input('Enter 1st number: '))
+b = int(input('Enter 2nd number: '))
+if a > b:
+    print('1st number is greater')
+    
+----------------------------------------------------
+# if-else clause:
+a = int(input('Enter 1st number: '))
+b = int(input('Enter 2nd number: '))
+if a > b:
+    print('1st number is greater')
+else:
+    print('2nd number is greater')
+
+----------------------------------------------------
+#el-if clause: (when more than 2 conditions are there)
+a = int(input('Enter 1st number: '))
+b = int(input('Enter 2nd number: '))
+if a > b:
+    print('1st number is greater')
+elif a == b:
+    print('both numbers are euqal')
+else:
+    print('2nd number is greater')
+    
+    
+----------------------------------------------------
+#el-if clause: (when more than 2 conditions are there)
+a = int(input('Enter 1st number: '))
+b = int(input('Enter 2nd number: '))
+if a > b:
+    print('1st number is greater')
+if a == b:
+    print('both numbers are euqal')
+elif a%b == 0:
+        print('both numbers are divisible')
+        print('a/b =', a/b)
+else:
+    print('2nd number is greater')   
+----------------------------------------------------    
+__________________________________________________________________________________________________________________________________________________________
+
+#BMI calculator with message:
+import math
+name = input('Enter Name: ')
+height_m = float(input('Enter height in meters: '))
+weight_kg = float(input('Enter height in kg: '))
+BMI = weight_kg/(height_m**2)
+a = math.ceil(BMI)
+bmi = range(21,24)
+if BMI < 21:
+    print(name,'is Underweight.')
+elif a in list(bmi):
+    print(name,'is Fit.')
+else:
+    print(name,'is Overweight.')
+__________________________________________________________________________________________________________________________________________________________
+
